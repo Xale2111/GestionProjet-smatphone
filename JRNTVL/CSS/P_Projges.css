@@ -1,0 +1,164 @@
+*{
+    list-style: none;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-color: black;
+}
+#title{
+    color: white;
+    text-align: center;
+}
+#liste{
+    color: white;
+}
+#last{
+    padding-bottom: 0;
+}
+.underChoice{
+    display: none;
+}
+.underChoice li{
+    display: flex;
+    flex-direction: column;
+}
+.choice:hover .underChoice{
+    color: white;
+    position: absolute;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: darkgrey;
+}
+.underChoice .constructeur:hover{
+    color: red;
+}
+
+#liste{
+    display: flex;
+}
+#liste li{
+    margin-right: 20px;
+}
+
+.constructeur{
+    margin-bottom: 5px;
+    margin-right: 30px;
+}
+
+/*Checkbox webkit*/
+.constructeur label{
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.constructeur input[type="checkbox"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.constructeur > label::before{
+    content:'';
+    width: 20px;
+    height: 20px;
+    border-radius: 10%;
+    color: white;
+    background-color: none;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.constructeur input[type=checkbox]:checked + label:after{
+    font-family: 'Webdings';
+    font-style: oblique;
+    content: "a";
+    color: red;
+    font-size: 30px;
+    position: absolute;
+    top: -6px;
+    left: -7px;
+}
+.tel > div > img{
+    height: 252px;
+    display: flex;
+    margin: auto;
+    height: max-content;
+    width: max-content;
+
+}
+.tel{
+    color: white;
+    height: 400px;
+    width: 252px;
+    border: 1px solid white;
+}
+.detail{
+    display: none;
+}
+.detail>p{
+    margin-left: 10px;
+}
+.name>p{
+    margin-left: 10px;
+}
+.tel:hover img{
+    /*animation: blur 0.5s forwards 75ms;*/
+    display: none;
+}
+.tel:hover .description{
+    display: block
+}
+.name{
+    display: block;
+    margin-top: 40px;
+}
+.tel:hover .name{
+    margin-top: 0;
+}
+.tel:hover .detail{
+    margin-bottom: 0px;
+    display: block;
+}
+.first{
+    margin-top: 0px;
+}
+.last{
+    margin-bottom: 0px;
+}
+
+@keyframes blur {
+    0%{
+        border-radius: 0%;
+        -webkit-filter: blur(0px); /*Safari et Chrome*/
+        -moz-animation: blur(0px); /*Firefox*/
+        -ms-animation: blur(0px); /*Internet Explorer 9*/
+        -o-animation: blur(0px); /*Opera*/
+        animation: blur(0px); /*Default*/
+    }
+    100%{
+        border-radius: 100%;
+        -webkit-filter: blur(100px); /*Safari et Chrome*/
+        -moz-animation: blur(100px); /*Firefox*/
+        -ms-animation: blur(100px); /*Internet Explorer 9*/
+        -o-animation: blur(100px); /*Opera*/
+        animation: blur(100px); /*Default*/
+    }
+}
+#container{
+    display: grid;
+    grid-template-columns: 254px 254px 254px 254px 254px;
+    grid-column-gap: 100px;
+    grid-row-gap: 100px;
+    justify-content: center;
+}
+.description{
+    display: block;
+    margin-top: 8px;
+}
+.name{
+    display: block;
+}
+#smartphone{
+    display: none;
+}
