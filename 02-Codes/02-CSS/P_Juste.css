@@ -1,0 +1,171 @@
+/*Style de base*/
+*{
+    list-style: none;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Style du corp*/
+body{
+    background-color: rgb(51, 51, 51);
+}
+
+/*Style du titre*/
+#title{
+    color: white;
+    text-align: center;
+}
+
+/*Style des listes et des sous listes et met la liste en horizontal*/
+#liste{
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+/*Met une marge entre chaque liste*/
+#liste li{
+    margin-right: 20px;
+}
+
+/*Met les filtres en ligne*/
+#liste > ul{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Enlève l'espace en bas*/
+.last{
+    padding-bottom: 0;
+}
+
+/*Enlève l'espace en haut*/
+.first{
+    margin-top: 0px;
+}
+
+/*Cache les sous listes*/
+.underChoice{
+    display: none;
+}
+
+/*Montre les sous listes lors du passage de la souris*/
+.choice:hover .underChoice{
+    /*Permet de pouvoir afficher la liste par dessus d'autres éléments*/
+    position: absolute;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: darkgrey;
+}
+
+/*Met de l'espace entre les sous listes*/
+.constructeur{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*Change la couleur du texte au passage de la souris*/
+.constructeur:hover{
+    color: red;
+}
+
+    /*CHANGE CHECKBOX WEBKIT*/
+
+/*Met les coches en face des bon éléments*/
+.construit{
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/*Enlève les cases des checkbox*/
+.constructeur input[type = "checkbox"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-apearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+/*Met l'espace pour les coches*/
+.constructeur > label::before{
+    content:" ";
+    width: 20px;
+    height: 20px;
+    border-radius: 10%;
+    margin-right: 10px;
+    color: white;
+    background-color: none;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+/*Créer les coches si appuyer*/
+.constructeur input[type = "checkbox"]:checked + label:after{
+    font-family: 'Webdings';
+    font-style: oblique;
+    content: "a";
+    color: red;
+    font-size: 30px;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+}
+    /*______________________*/
+
+/*Met la couleur du texte en blanc et on définit un cadre*/
+.tel{
+    color: white;
+    height: 400px;
+    width: 252px;
+    border: 1px solid white;
+}
+
+/*Enlève l'image*/
+.tel:hover img{
+    display: none;
+}
+
+/*Met la description*/
+.tel:hover .description{
+    display: block
+}
+
+/*Met aucune marge pour le texte du haut*/
+.tel:hover .name{
+    margin-top: 0;
+}
+
+/*Met aucune marge pour le texte du bas */
+.tel:hover .detail{
+    display: block;
+    margin-bottom: 0px;
+}
+
+/**/
+.detail{
+    display: none;
+}
+.description{
+    margin: 8px;
+}
+
+/**/
+.name{
+    display: block;
+}
+
+/**/
+#container{
+    display: grid;
+    grid-template-columns: 254px 254px 254px 254px 254px;
+    grid-column-gap: 100px;
+    grid-row-gap: 100px;
+    justify-content: center;
+}
+
+
+#latterale{
+    display: none;
+}

@@ -1,0 +1,79 @@
+@media screen and (max-width: 1700px){
+    #container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-column-gap: 100px;
+        grid-row-gap: 100px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1350px){
+    #container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 100px;
+        grid-row-gap: 100px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #container{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 100px;
+        grid-row-gap: 100px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 650px){
+    #container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-column-gap: 100px;
+        grid-row-gap: 100px;
+        justify-content: center;
+    }
+
+    .choice{
+        display: none;
+    }
+    .underChoice{
+        display: none;
+    }
+    .check{
+        display: none;
+    }
+    #liste div:hover .underChoice{
+        display: none;
+    }
+
+    #Test:hover .underChoice{
+        position: absolute;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: darkgrey;
+    }
+    #smartphone{
+        display: block;
+    }
+
+    #latterale{
+        display: block;
+        margin: auto;
+    }
+    
+    #liste:hover .choice{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #latterale>img{
+        height: 50px;
+    }
+}
